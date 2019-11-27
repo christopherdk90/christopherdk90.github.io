@@ -10,11 +10,24 @@
     color: white;
     font-family: Abel, Arial;
   }
+  .bg-Image {
+    position: relative;
+    display:block;
+  }
+  .bg-Image img {
+    position:fixed;
+    left: 0;
+    top: -50px;
+    width: 100%;
+    height: auto;
+    opacity: 0.26;
+    z-index: -1;
+  }
   h1 {
     font-size: 50px;
     font-family: "Lexend Giga";
     text-transform: lowercase;
-    color:#dbdbdb;
+    color:#fafbff;
     text-align: center;
   }
   h2 {
@@ -23,60 +36,152 @@
     font-family: "Lexend Giga";
     text-align: center;
   }
-  h5 {
-    font-size: 15px;
-  }
-  h6 {
-    font-family: Raleway;
-    font-size: 15px;
-  }
   #tab {
     margin: 20px;
   }
-  .thin-blue-border {
-   border-color: #00287e;
-    border-width: 0px;
-    border-style: solid;  
-    border-radius: 50%;
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top:50%;
+    left:150px;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
-  .small-img {
-   width: 300px;    
+
+  .circle-border { 
+    border-radius: 50%;
+    width: 300px;
+    height: 300px; 
+  }
+  figure {
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 15px;
+      padding-right: 15px;
   }
   .menu-bar {
-   border-style:ridge;
-    border-color: #fff;
-    border-width: 0px;
-   background-color: #d6d6d6;
-   color: rgb(0, 0, 32);
+   background-color: rgb(253, 253, 255);
    padding: 3px;
    margin: 3px;
   }
+  .image-center {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+.hover07 figure {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.hover07 figure span {
+  text-align: center;
+	font-size: 40px;
+  font-family: Raleway;
+  color:rgb(255, 255, 255);
+  font:bold;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000; 
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+  -webkit-transition: .30s ease-in-out;
+	transition: .30s ease-in-out;
+  opacity: 0;
+}
+
+.hover07 figure:hover span{
+  opacity:1;  
+  -webkit-transition: .30s ease-in-out;
+	transition: .30s ease-in-out;
+}
+
+.hover07 figure img {
+	-webkit-filter: blur(0);
+	filter: blur(0);
+  -webkit-transform: scale(0.9);
+	transform: scale(0.9);
+  -webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+.hover07 figure:hover img {
+	-webkit-filter: blur(1px);
+	filter: blur(1px);
+  -webkit-transform: scale(1);
+	transform: scale(1);
+  -webkit-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
 </style>
   
 
+
 <body>
+
+    <div class="bg-Image">
+        <img src="bg.jpg">
+      </div>
+
 <h1>Chris Kimrey's portfolio</h1>
 
   <h2 class="menu-bar">
     </h2>
     <br><br>
  
+  <!-- 
 <center>
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
+  <div class="container">
+  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!">
+  <span class="overlay">
+    <span class="text">Project 1</span>
+  </span>
+</div>
   <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
   <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
   <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
   <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
 </center>
- <br> 
- <h5>
-<p>Nothing is here yet, but check back up in the future!</p>
-<br>
-<p>Testing first GitKraken commit.</p>
-</h5>
-  
-<br><br>
-<h6>It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way.</h6>
+-->
+
+<center>
+  <div class="hover07">
+
+      <figure>
+        <img class="circle-border image-center" src="ein ring.jpg">
+        <span>tower defense</span>
+      </figure>
+
+
+
+      <figure>
+        <img class="circle-border image-center" src="mipsreversi.jpg">
+        <span>reversi<br>using mips assembly</span>
+      </figure>
+
+
+      <figure>
+        <img class="circle-border image-center" src="ein2.jpg">
+        <span>pandemic</span>
+      </figure>
+
+
+  </div>
+</center>
+
 
 </body>
 </html>
