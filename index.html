@@ -1,187 +1,119 @@
 <!DOCTYPE html>
 <html>
-  <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch&display=swap" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap" rel="stylesheet"> 
-<style>
-  body {
-    background-color: rgb(0, 0, 25);
-    color: white;
-    font-family: Abel, Arial;
-  }
-  .bg-Image {
-    position: relative;
-    display:block;
-  }
-  .bg-Image img {
-    position:fixed;
-    left: 0;
-    top: -50px;
-    width: 100%;
-    height: auto;
-    opacity: 0.26;
-    z-index: -1;
-  }
-  h1 {
-    font-size: 50px;
-    font-family: "Lexend Giga";
-    text-transform: lowercase;
-    color:#fafbff;
-    text-align: center;
-  }
-  h2 {
-    font-size: 13px;
-    text-transform: lowercase;
-    font-family: "Lexend Giga";
-    text-align: center;
-  }
-  #tab {
-    margin: 20px;
-  }
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top:50%;
-    left:150px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+  <style>
+    body {
+      background-color: rgb(0, 0, 25);
+      color: white;
+    }
+    h1 {
+      font-size: 50px;
+      color:#fafbff;
+      text-align: center;
+    }
+    h2 {
+      font-size: 40px;
+      text-align: center;
+    }
+    h3 {
+      font-size: 30px;
+      text-align: center;
+    }
+    table {
+      text-align: center;
+      width: 50%;
+      border-spacing: 10px;
+    }
+    th {
+      font-size: 20px;
+      width: 33%;
+    }
+    .line-across {
+      background-color: rgb(253, 253, 255);
+      padding: 1px;
+      margin: 1px;
+    }
+    .project-alt-bg {
+      background-color: rgb(0, 30, 60);
+      width:80%;
+      min-height: 350px;
+      border-width: 2px;
+      border-style: solid;
+    }
+    .project-bg {
+      min-height: 350px;
+    }
+  </style>
+  <body>
+    <center>
+      <h1>Christopher Kimrey</h1>
+      <h2>Software Engineer</h2>
 
-  .circle-border { 
-    border-radius: 50%;
-    width: 300px;
-    height: 300px; 
-  }
-  figure {
-      display: inline-block;
-      margin-left: auto;
-      margin-right: auto;
-      padding-left: 15px;
-      padding-right: 15px;
-  }
-  .menu-bar {
-   background-color: rgb(253, 253, 255);
-   padding: 3px;
-   margin: 3px;
-  }
-  .image-center {
-    display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
-  }
+      <div class="line-across" style="width: 90%;"></div>
 
+        <h2>About Me</h2>
+          <table>
+            <tr>
+              <th>Education</th>
+              <th>Skills</th>
+              <th>Background</th>  
+            </tr>
+            <tr>
+              <td>Pennsylvania State University</td>
+              <td>
+                C#
+              </td>
+              <td>Army Veteran</td>
+            </tr>
+          </table>
 
+        <h2>Projects</h2>
 
-.hover07 figure {
-	position: relative;
-	display: inline-block;
-	overflow: hidden;
-}
+          <div class="project-alt-bg">          
+            <h3>Reversi</h3>
+            <table>
+              <tr>
+                <td>
+                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+                <td>
+                  This is my MIPS reversi project from 2019.<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
+                </td>
+              </tr>
+            </table>
+          </div>
 
-.hover07 figure span {
-  text-align: center;
-	font-size: 40px;
-  font-family: Raleway;
-  color:rgb(255, 255, 255);
-  font:bold;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000; 
-	display: inline-block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	-moz-transform: translate(-50%, -50%);
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-  -webkit-transition: .30s ease-in-out;
-	transition: .30s ease-in-out;
-  opacity: 0;
-}
+          <div class="project-bg">          
+            <h3>LapperUI</h3>
+            <table>
+              <tr>
+                <td>
+                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+                <td>
+                  This is my LiveLapper<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
+                </td>
+              </tr>
+            </table>
+          </div>
 
-.hover07 figure:hover span{
-  opacity:1;  
-  -webkit-transition: .30s ease-in-out;
-	transition: .30s ease-in-out;
-}
+          <div class="project-alt-bg"> 
+            <h3>SetupViewer</h3> 
+            <table>
+              <tr>
+                <td>
+                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </td>
+                <td>
+                  This is my SetupViewer project that I built with inspriation from a previous version posted on the community forums.<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
+                </td>
+              </tr>
+            </table>
+          </div>
+          
 
-.hover07 figure img {
-	-webkit-filter: blur(0);
-	filter: blur(0);
-  -webkit-transform: scale(0.9);
-	transform: scale(0.9);
-  -webkit-transition: .25s ease-in-out;
-	transition: .25s ease-in-out;
-}
-.hover07 figure:hover img {
-	-webkit-filter: blur(1px);
-	filter: blur(1px);
-  -webkit-transform: scale(1);
-	transform: scale(1);
-  -webkit-transition: .25s ease-in-out;
-	transition: .25s ease-in-out;
-}
-</style>
-  
-
-
-<body>
-
-    <div class="bg-Image">
-        <img src="bg.jpg">
-      </div>
-
-<h1>Chris Kimrey's portfolio</h1>
-
-  <h2 class="menu-bar">
-    </h2>
-    <br><br>
- 
-  <!-- 
-<center>
-  <div class="container">
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!">
-  <span class="overlay">
-    <span class="text">Project 1</span>
-  </span>
-</div>
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
-  <img id="tab" class="thin-blue-border small-img" src="ein ring.jpg" alt="My dog with his ring!"> 
-</center>
--->
-
-<center>
-  <div class="hover07">
-
-      <figure>
-        <img class="circle-border image-center" src="ein ring.jpg">
-        <span>tower defense</span>
-      </figure>
-
-
-
-      <figure>
-        <img class="circle-border image-center" src="mipsreversi.jpg">
-        <span>reversi<br>using mips assembly</span>
-      </figure>
-
-
-      <figure>
-        <img class="circle-border image-center" src="ein2.jpg">
-        <span>pandemic</span>
-      </figure>
-
-
-  </div>
-</center>
-
-
-</body>
+        <h2>Contact Me</h2>
+          <h3>Email</h3>
+          <h3>Github</h3>
+    </center>
+  </body>
 </html>
