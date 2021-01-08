@@ -2,46 +2,193 @@
 <html>
   <style>
     body {
-      background-color: rgb(0, 0, 25);
+      background-color: rgb(0, 0, 15);
       color: white;
     }
     h1 {
       font-size: 50px;
-      color:#fafbff;
+      /*color:#fafbff;*/
+      color: rgb(86, 156, 214);
       text-align: center;
+      font-family: Consolas, monaco, monospace;
     }
     h2 {
-      font-size: 40px;
+      font-size: 45px;
+      color: rgb(78, 201, 176);
       text-align: center;
+      font-family: Consolas, monaco, monospace;
     }
     h3 {
-      font-size: 30px;
+      font-size: 40px;
+      color: rgb(220, 220, 170);
+      font-family: Consolas, monaco, monospace;
+      text-align: center;
+    }
+    h4 {
+      font-size: 35px;
+      color: rgb(216, 160, 223);
+      font-family: Consolas, monaco, monospace;
       text-align: center;
     }
     table {
       text-align: center;
-      width: 50%;
-      border-spacing: 10px;
+      font-family: Consolas, monaco, monospace;
     }
-    th {
-      font-size: 20px;
-      width: 33%;
+    td {
+      padding: 0 40px 40px 40px;
+    }
+    a {
+      color: inherit;
     }
     .line-across {
-      background-color: rgb(253, 253, 255);
+      background-color: rgb(86, 156, 214);
       padding: 1px;
       margin: 1px;
     }
-    .project-alt-bg {
-      background-color: rgb(0, 30, 60);
-      width:80%;
-      min-height: 350px;
-      border-width: 2px;
-      border-style: solid;
-    }
     .project-bg {
       min-height: 350px;
+      width:100%;
     }
+     /* Style the tab */
+    .AboutMeTab {
+      overflow: hidden;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .AboutMeTab button {
+      background-color:inherit;
+      font-size:30px;
+      font-family: Consolas, monaco, monospace;
+      color: rgb(216, 160, 223);
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 20px;
+      transition: 0.3s;
+      display: block;
+      width: 250px;
+      margin:5px;
+      border: 1px solid rgb(0, 0, 15);
+    }
+
+    /* Change background color of buttons on hover */
+    .AboutMeTab button:hover {
+      color: white;
+    }
+
+    /* Create an active/current tablink class */
+    .AboutMeTab button.active {
+      border: 1px solid white;
+      color: white;
+      
+    }
+
+    /* Style the tab */
+    .ProjectsTab {
+      overflow: hidden;
+    }
+
+    /* Style the buttons that are used to open the tab content */
+    .ProjectsTab button {
+      background-color:inherit;
+      font-size:30px;
+      font-family: Consolas, monaco, monospace;
+      color: rgb(216, 160, 223);
+      float: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 20px 20px;
+      transition: 0.3s;
+      display:inline;
+      width: 250px;
+      margin:5px;
+      border: 1px solid rgb(0, 0, 15);
+    }
+
+    /* Change background color of buttons on hover */
+    .ProjectsTab button:hover {
+      color: white;
+    }
+
+    /* Create an active/current tablink class */
+    .ProjectsTab button.active {
+      border: 1px solid white;
+      color: white;
+      
+    }
+
+    /* Style the tab content */
+    .projectcontent {
+      margin: auto;
+      border-top: none;
+      font-size: 25px;
+      font-family: Consolas, monaco, monospace;
+      color: rgb(214, 157, 128);
+    } 
+
+    .projectcontent table {
+      width: 1300px;
+      height: 600px;
+      margin: 50px;
+    }
+
+    .projectcontent button {
+      background-color: rgb(0, 0, 15);
+      color: white;
+      font-size: 20px;
+    }
+
+    .projectcontent button:hover{
+      border-color: rgb(86, 156, 214);
+      color: rgb(86, 156, 214);
+    }
+
+    /* Style the tab content */
+    .aboutcontent {
+      display: none;
+      padding: 6px 12px;
+      margin-left: 50px;
+      border-top: none;
+      font-size: 25px;
+      font-family: Consolas, monaco, monospace;
+      text-align: left;
+      color: rgb(214, 157, 128);
+    } 
+
+    #Projects {
+      min-height: 700px;
+    }
+
+    #AboutMe {
+      width: 950px;
+      padding-bottom: 30px;
+      min-height: 300px;
+    }
+
+    #AboutMeBar {
+      float: left;
+      width: 255px;
+    }
+    #AboutMeContent {
+      margin-left: 255px;
+    }
+
+    #ContactMe table {
+      width: 750px;
+    }
+
+    #ContactMe th {
+      height: 75px;
+      font-size: 30px;
+      color: rgb(216, 160, 223);
+    }
+
+    #ContactMe td {
+      font-size: 25px;
+    }
+
   </style>
   <body>
     <center>
@@ -50,70 +197,299 @@
 
       <div class="line-across" style="width: 90%;"></div>
 
-        <h2>About Me</h2>
+        <h3>About Me</h3>
+
+        <div id="AboutMe">
+          <div id="AboutMeBar">
+            <div class="AboutMeTab">
+              <button class="aboutlinks" onclick="openAboutMe(event, 'Background')" id="defaultAboutOpen">Background</button>
+              <button class="aboutlinks" onclick="openAboutMe(event, 'Education')">Education</button>
+              <button class="aboutlinks" onclick="openAboutMe(event, 'Skills')">Skills</button>
+            </div>
+          </div>
+  
+          <div id="AboutMeContent">
+            <div id="Background" class="aboutcontent">
+              <p>Born and raised in Raleigh, NC</p>
+              <p>Army Veteran</p>
+              <p>Bass / Baritone in Vocal Choir</p>
+              <p>Amateur Nature Photographer</p>
+            </div>
+            
+            <div id="Education" class="aboutcontent">
+              <p>Bachelor of Science in Software Engineering
+                <div style="font-size: 20px; padding-left: 50px;">
+                  The Pennsylvania State University <br>
+                  2019 - Present
+                </div>
+              </p>
+              <p>Bachelor of Science in Nursing
+                <div style="font-size: 20px; padding-left: 50px;">
+                  The Pennsylvania State University <br>
+                  2012 - 2015
+                </div>
+              </p>
+            </div>
+            
+            <div id="Skills" class="aboutcontent">
+              <p><table>
+                <tr>
+                  <td>C#</td>
+                  <td>Java</td>
+                </tr>
+                <tr>
+                  <td>WPF</td>
+                  <td>Android</td>
+                </tr>
+                <tr>
+                  <td>SQL</td>
+                  <td>Photoshop</td>
+                </tr>
+              </table></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="line-across" style="width: 90%; margin-top: 50px;"></div>
+
+        <h3>Major Projects</h3>
+
+        <div id="Projects">
+          <div id="ProjectsBar">
+            <div class="ProjectsTab">
+              <button class="projectlinks" onclick="openProject(event, 'Reversi')" id="defaultProjectOpen">Reversi</button>
+              <button class="projectlinks" onclick="openProject(event, 'LiveLapper')">LiveLapper</button>
+              <button class="projectlinks" onclick="openProject(event, 'SetupViewer')">SetupViewer</button>
+            </div>
+          </div>
+
+          <div id="ProjectContent">
+            <div id="Reversi" class="projectcontent">
+              <table>
+                <tr style="vertical-align: top;">
+                  <td style="width: 50%;">
+                    <button class="ReversiPicBtnLeft" onclick="plusReversi(-1)" style="float: left; height:100px; margin-top: 150px; margin-right:10px;">&#10094;</button>
+                    <img class="ReversiPics" src="reversi1.png" width="400" style="float: left;">
+                    <img class="ReversiPics" src="reversi2.png" width="400" style="float: left;">
+                    <img class="ReversiPics" src="reversi3.png" width="400" style="float: left;">
+                    <img class="ReversiPics" src="reversi4.png" width="400" style="float: left;">
+                    <img class="ReversiPics" src="reversi5.png" width="400" style="float: left;">
+                    <img class="ReversiPics" src="reversi6.png" width="400" style="float: left;">
+                    <button class="ReversiPicBtnRight" onclick="plusReversi(1)" style="float: left; height:100px; margin-top: 150px; margin-left:10px;">&#10095;</button>
+                  </td>
+                  <td style="width: 50%; text-align: left;">
+                  <strong style="font-size: 30px;">What:</strong><br>
+                  Reversi written in MIPS Assembly<br><br>
+                  <strong style="font-size: 30px;">Why:</strong><br>
+                  Final project for Microprocessors class<br><br>
+                  <strong style="font-size: 30px;">Capabilities</strong><br>
+                  Human vs Human (hotseat)<br>
+                  Human vs AI (via negamax algorithm)<br><br>
+                  <strong style="font-size: 30px;">Source Code:</strong><br>
+                  <a href="https://github.com/christopherdk90/MIPSReversi">Reversi on Github</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+
+            <div id="LiveLapper" class="projectcontent">
+              <table>
+                <tr style="vertical-align: top;">
+                  <td style="width: 50%;">
+                    <button class="LapperPicBtnLeft" onclick="plusLapper(-1)" style="float: left; height:100px; margin-top: 150px; margin-right:10px;">&#10094;</button>
+                    <img class="LapperPics" src="lapper1.png" width="400" style="float: left;">
+                    <img class="LapperPics" src="lapper2.png" width="400" style="float: left;">
+                    <img class="LapperPics" src="lapper3.png" width="400" style="float: left;">
+                    <img class="LapperPics" src="lapper4.png" width="400" style="float: left;">
+                    <button class="LapperPicBtnRight" onclick="plusLapper(1)" style="float: left; height:100px; margin-top: 150px; margin-left:10px;">&#10095;</button>
+                  </td>
+                  <td style="width: 50%; text-align: left;">
+                    <strong style="font-size: 30px;">What:</strong><br>
+                    Lap logger, analysis, and comparison tool utilizing the <a href="http://www.iracing.com" target="_blank">iRacing</a> API<br>
+                    Written in C# / WPF<br><br>
+                    <strong style="font-size: 30px;">Why:</strong><br>
+                    There is a need to record and compare instantaneous lap times for car tuning<br><br>
+                    <strong style="font-size: 30px;">Capabilities:</strong><br>
+                    Data recording from API<br>
+                    Live data comparison<br>
+                    Export to CSV (future)<br><br>
+                    <strong style="font-size: 30px;">Source Code:</strong><br>
+                    <a href="https://github.com/christopherdk90/LiveLapper">LiveLapper on Github</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div id="SetupViewer" class="projectcontent">
+              <table>
+                <tr style="vertical-align: top;">
+                  <td style="width: 50%;">
+                    <button class="SetupPicBtnLeft" onclick="plusSetup(-1)" style="float: left; height:100px; margin-top: 150px; margin-right:10px;">&#10094;</button>
+                    <img class="SetupPics" src="setup1.png" width="400" style="float: left;">
+                    <img class="SetupPics" src="setup2.png" width="400" style="float: left;">
+                    <img class="SetupPics" src="setup3.png" width="400" style="float: left;">
+                    <img class="SetupPics" src="setup4.png" width="400" style="float: left;">
+                    <img class="SetupPics" src="setup5.png" width="400" style="float: left;">
+                    <img class="SetupPics" src="setup6.png" width="400" style="float: left;">
+                    <button class="SetupPicBtnRight" onclick="plusSetup(1)" style="float: left; height:100px; margin-top: 150px; margin-left:10px;">&#10095;</button>
+                  </td>
+                  <td style="width: 50%; text-align: left;">
+                    <strong style="font-size: 30px;">What:</strong><br>
+                    Read and compare exported vehicle configuration data from <a href="http://www.iracing.com" target="_blank">iRacing</a><br>
+                    Written in C# / WPF<br><br>
+                    <strong style="font-size: 30px;">Why:</strong><br>
+                    Easily compare and visualize the tuning differences between multiple racecars<br><br>
+                    <strong style="font-size: 30px;">Capabilities:</strong><br>
+                    Load in iRacing setup files<br>
+                    Compare differences across two or more setups<br>
+                    Export comparisons to excel<br><br>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+
+          </div>
+
+        </div>
+
+        <div class="line-across" style="width: 90%; margin-top: 50px;"></div>  
+
+        
+
+        <h3>Contact Me</h3>
+        <div id="ContactMe">
           <table>
             <tr>
-              <th>Education</th>
-              <th>Skills</th>
-              <th>Background</th>  
+              <th style="width: 50%;">Email</th>
+              <th style="width: 50%;">Github</th>
             </tr>
             <tr>
-              <td>Pennsylvania State University</td>
               <td>
-                C#
+                chris.d.kimrey@gmail.com
               </td>
-              <td>Army Veteran</td>
+              <td>
+                <a href="https://github.com/christopherdk90" target="_blank">christopherdk90</a>
+              </td>
             </tr>
           </table>
+        </div>
 
-        <h2>Projects</h2>
-
-          <div class="project-alt-bg">          
-            <h3>Reversi</h3>
-            <table>
-              <tr>
-                <td>
-                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </td>
-                <td>
-                  This is my MIPS reversi project from 2019.<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="project-bg">          
-            <h3>LapperUI</h3>
-            <table>
-              <tr>
-                <td>
-                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </td>
-                <td>
-                  This is my LiveLapper<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
-                </td>
-              </tr>
-            </table>
-          </div>
-
-          <div class="project-alt-bg"> 
-            <h3>SetupViewer</h3> 
-            <table>
-              <tr>
-                <td>
-                  <iframe width="560" height="315" src="http://www.youtube.com/embed/gfj2RFB_FJg" frameborder="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </td>
-                <td>
-                  This is my SetupViewer project that I built with inspriation from a previous version posted on the community forums.<br>It does many things.<br>I learned a lot of stuff making it.<br>It was a good time.<br>
-                </td>
-              </tr>
-            </table>
-          </div>
-          
-
-        <h2>Contact Me</h2>
-          <h3>Email</h3>
-          <h3>Github</h3>
     </center>
   </body>
 </html>
+
+<script>
+  function openAboutMe(evt, pageName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("aboutcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("aboutlinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  function openProject(evt, projectName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("projectcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("projectlinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(projectName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  
+  document.getElementById("defaultAboutOpen").click();
+  document.getElementById("defaultProjectOpen").click();
+
+  var reversiIndex = 1;
+  showReversi(reversiIndex);
+
+  function plusReversi(n){
+    showReversi(reversiIndex += n);
+  }
+
+  function showReversi(n){
+    var i;
+    var x = document.getElementsByClassName("ReversiPics");
+    if (n > x.length) {
+      reversiIndex = 1;
+    }
+    if (n < 1){
+      reversiIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++){
+      x[i].style.display = "none";
+    }
+    x[reversiIndex-1].style.display = "block";
+  }
+
+  var lapperIndex = 1;
+  showLapper(lapperIndex);
+
+  function plusLapper(n){
+    showLapper(lapperIndex += n);
+  }
+
+  function showLapper(n){
+    var i;
+    var x = document.getElementsByClassName("LapperPics");
+    if (n > x.length) {
+      lapperIndex = 1;
+    }
+    if (n < 1){
+      lapperIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++){
+      x[i].style.display = "none";
+    }
+    x[lapperIndex-1].style.display = "block";
+  }
+
+  var setupIndex = 1;
+  showSetup(setupIndex);
+
+  function plusSetup(n){
+    showSetup(setupIndex += n);
+  }
+
+  function showSetup(n){
+    var i;
+    var x = document.getElementsByClassName("SetupPics");
+    if (n > x.length) {
+      setupIndex = 1;
+    }
+    if (n < 1){
+      setupIndex = x.length;
+    }
+    for (i = 0; i < x.length; i++){
+      x[i].style.display = "none";
+    }
+    x[setupIndex-1].style.display = "block";
+  }
+
+</script>
